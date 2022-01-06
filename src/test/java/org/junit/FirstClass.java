@@ -15,16 +15,18 @@ public class FirstClass {
 	@BeforeClass
 	public static void launchBrowser()
 	{
-		WebDriverManager.edgedriver().setup();
-		driver=new EdgeDriver();
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
 		
 	}
 	
 	@AfterClass
-	public static void closeProgram()
+	public static  void closeProgram()
 	{
 		driver.close();
 	}
+	
+
 	
 	@Before
 	public void openApplication()
